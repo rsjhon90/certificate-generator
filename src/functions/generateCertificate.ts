@@ -6,13 +6,10 @@ import dayjs from "dayjs";
 import { S3 } from "aws-sdk";
 import { APIGatewayProxyHandler } from "aws-lambda";
 import * as Sentry from '@sentry/serverless';
-import { DynamoDB } from 'aws-sdk';
 
 import 'dotenv/config';
 
-// import { document } from "../utils/dynamodbClient"; // dynamoDB local
-
-const document = new DynamoDB.DocumentClient(); // dynamoDB cloud
+import { document } from "../utils/dynamodbClient";
 
 interface ICreateCertificate {
   id: string;

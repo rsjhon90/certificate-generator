@@ -23,19 +23,17 @@ E a partir do template `aws-nodejs-typescript` do Serverless.
 
 ## Execução
 
-- Altere as variáveis de ambiente em um arquivo `.env`.
+- Altere as variáveis de ambiente em um arquivo `.env` como no exemplo.
 - Rode `yarn` para instalar as dependências.
 
 ### Localmente
 
-- Rode `serverless dynamo install` para baixar o dynamoDB na raiz do projeto.
-- Alterne entre comment/uncomment nos arquivos das functions para a conexão com o banco de dados localmente.
-- Rode `yarn dynamo:start` para iniciar o banco de dados localmente.
+- Rode `serverless dynamodb install` para baixar o dynamoDB na raiz do projeto.
+- Rode `yarn dynamodb:start` para iniciar o banco de dados localmente.
 - Rode em outro terminal, `yarn dev` para subir a aplicação localmente.
 
 ### Deploying
 
-- Alterne entre comment/uncomment nos arquivos das functions para a conexão com o banco de dados em nuvem.
 - Rode `yarn deploy` para subir o projeto para AWS Lambda.
 
 ### Sentry para monitorar erros fora da aws

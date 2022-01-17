@@ -1,12 +1,9 @@
 import { APIGatewayProxyHandler } from "aws-lambda";
-import { DynamoDB } from 'aws-sdk';
 import * as Sentry from '@sentry/serverless';
 
 import 'dotenv/config';
 
-// import { document } from "../utils/dynamodbClient"; // dynamoDB local
-
-const document = new DynamoDB.DocumentClient(); // dynamoDB cloud
+import { document } from "../utils/dynamodbClient";
 
 Sentry.AWSLambda.init({
   dsn: process.env.SENTRY_DSN,

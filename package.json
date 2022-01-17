@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Serverless aws-nodejs-typescript template",
   "scripts": {
-    "dev": "serverless offline",
+    "dev": "NODE_ENV=development serverless offline",
     "deploy": "sls deploy --verbose",
     "dynamodb:start": "sls dynamodb start"
   },

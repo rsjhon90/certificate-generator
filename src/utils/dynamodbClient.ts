@@ -5,4 +5,6 @@ const options = {
   endpoint: "http://localhost:8000",
 };
 
-export const document = new DynamoDB.DocumentClient(options)
+export const document = process.env.NODE_ENV === 'development' ?
+  new DynamoDB.DocumentClient(options) :
+  new DynamoDB.DocumentClient();
